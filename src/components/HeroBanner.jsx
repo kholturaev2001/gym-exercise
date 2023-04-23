@@ -10,10 +10,18 @@ const HeroBanner = () => {
                 ml: { sm: '50px' }
             }}
         >
-            <Typography color='#ff2625' fontWeight='600' fontSize='26px'>
+            <Typography
+                component='span'
+                display='block'
+                color='#ff2625'
+                fontWeight='600'
+                fontSize='26px'
+            >
                 Fitness Club
             </Typography>
             <Typography
+                component='span'
+                display='block'
                 fontWeight={700}
                 sx={{ fontSize: { lg: "44px", xs: '40px' } }}
                 mb='23px'
@@ -21,16 +29,18 @@ const HeroBanner = () => {
             >
                 Sweat, Smile <br /> and Reapeat
             </Typography>
-            <Typography fontSize='22px' lineHeight='35px' mb={4}>
+            <Typography component='span'
+                display='block' fontSize='22px' lineHeight='35px' mb={4}>
                 Check out the most effective exercises
             </Typography>
-            <Button 
-                variant='contained' 
-                color='error' 
+            <Button
+                variant='contained'
+                color='error'
                 href='#exercises'
-                sx={{ backgroundColor: "#ff2625", padding: '10px'}}
+                sx={{ backgroundColor: "#ff2625", padding: '10px' }}
             >Explore Exercises</Button>
-            <Typography
+            <Typography component='span'
+                display='block'
                 fontWeight={600}
                 color='#ff2625'
                 sx={{
