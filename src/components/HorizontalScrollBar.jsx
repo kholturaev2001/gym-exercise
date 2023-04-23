@@ -20,37 +20,37 @@ const RightArrow = () => {
     const { scrollNext } = useContext(VisibilityContext);
 
     return (
-        <Typography onClick={() => scrollNext()} className="left-arrow">
+        <Typography onClick={() => {
+            console.log('next clicked')
+            scrollNext()
+        }} className="left-arrow">
             <img src={RightArrowIcon} alt="right-arrow" />
         </Typography>
     );
 };
 
-const HorizontalScrollBar = ({ data, setBodyPart, bodyPart }) => {
-    return (
-        <ScrollMenu
-            LeftArrow={LeftArrow}
-            RightArrow={RightArrow}
-        >
-            {
-                data.map((item, id) => (
-                    <Box
-                        key={item.id || item}
-                        itemID={item.id || item}
-                        title={item.id || item}
-                        m='0 40px'
-                    >
-                        <BodyPart
-                            item={item}
-                            bodyPart={bodyPart}
-                            setBodyPart={setBodyPart}
-                        />
+const HorizontalScrollbar = ({ data, setBodyPart, bodyPart }) => (
+    <ScrollMenu
+        LeftArrow={LeftArrow}
+        RightArrow={RightArrow}
+    >
+        {data.map((item) => (
+            <Box
+                key={item.id || item}
+                itemId={item.id || item}
+                title={item.id || item}
+                m='0 40px'
+            >
+                <BodyPart
+                    item={item}
+                    bodyPart={bodyPart}
+                    setBodyPart={setBodyPart}
+                />
 
-                    </Box>
-                ))
-            }
-        </ScrollMenu>
-    )
-}
+            </Box>
+        ))}
+    </ScrollMenu>
+)
 
-export default HorizontalScrollBar
+
+export default HorizontalScrollbar

@@ -7,8 +7,8 @@ import Exercises from '../components/Exercises'
 
 const Home = () => {
   const [exercises, setExercises] = useState([])
-  console.log("🚀 ~ file: Home.jsx:10 ~ Home ~ exercises:", exercises)
   const [bodyPart, setBodyPart] = useState('all')
+  console.log("🚀 ~ file: Home.jsx:11 ~ Home ~ bodyPart:", bodyPart)
 
   return (
     <Box>
