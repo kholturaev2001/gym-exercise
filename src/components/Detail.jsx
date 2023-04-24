@@ -52,9 +52,9 @@ const Detail = ({ exerciseDetail }) => {
         </Typography>
 
         {
-          extraDetail.map((item) => (
+          extraDetail.map((item, id) => (
             <Stack
-              key={item.name}
+              key={id}
               direction='row'
               gap='24px'
               alignItems='center'

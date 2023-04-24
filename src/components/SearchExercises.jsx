@@ -17,14 +17,11 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
         'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
         exerciseOptions
       )
-      console.log("🚀 ~ file: SearchExercises.jsx:21 ~ fetchExercisesData ~ bodyPartsData:", bodyPartsData)
+      // console.log("🚀 ~ file: SearchExercises.jsx:21 ~ fetchExercisesData ~ bodyPartsData:", bodyPartsData)
       setBodyParts(['all', ...bodyPartsData])
     }
-    // fetchExercisesData()
+    fetchExercisesData()
 
-    return () => {
-
-    }
   }, [])
 
   const handleSearch = async () => {
@@ -109,6 +106,7 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
           data={bodyParts}
           bodyPart={bodyPart}
           setBodyPart={setBodyPart}
+          isBodyParts={true}
         />
 
       </Box>

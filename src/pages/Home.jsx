@@ -8,7 +8,6 @@ import Exercises from '../components/Exercises'
 const Home = () => {
   const [exercises, setExercises] = useState([])
   const [bodyPart, setBodyPart] = useState('all')
-  console.log("🚀 ~ file: Home.jsx:11 ~ Home ~ bodyPart:", bodyPart)
 
   return (
     <Box>
